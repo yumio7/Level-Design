@@ -5,11 +5,15 @@ using UnityEngine;
 public class PlayerBehavior : MonoBehaviour
 {
     public float speed = 5f;
+    public bool thirdPerson = true;
+    public GameObject firstPovCamera;
+    public GameObject thirdPovCamera;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        firstPovCamera = GameObject.Find("FirstCamera");
+        thirdPovCamera = GameObject.Find("ThirdCamera");
     }
 
     // Update is called once per frame
@@ -27,12 +31,28 @@ public class PlayerBehavior : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.A))
         {
-            transform.Translate(-speed, 0, 0);
+            transform.Rotate(0, -90, 0);
         }
 
         if (Input.GetKeyDown(KeyCode.D))
         {
-            transform.Translate(speed, 0, 0);
+            transform.Rotate(0, 90, 0);
         }
+
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            if (!thirdPerson)
+            {
+                thirdPovCamera.SetActive(false);
+                firstPovCamera.SetActive(true);
+                thirdPerson = true;
+            } else
+            {
+                firstPovCamera.SetActive(false);
+                thirdPovCamera.SetActive(true);
+                thirdPerson = false;
+            }
+        }
+        
     }
 }

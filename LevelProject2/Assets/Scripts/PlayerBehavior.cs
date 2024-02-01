@@ -26,8 +26,9 @@ public class PlayerBehavior : MonoBehaviour
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
+        float moveY = Input.GetAxis("Jump");
 
-        Vector3 forceVector = new Vector3(moveHorizontal, 0.0f, moveVertical);
+        Vector3 forceVector = new Vector3(moveHorizontal, moveY, moveVertical);
         forceVector = camtf.TransformDirection(forceVector);
 
         rb.AddForce(forceVector * speed);

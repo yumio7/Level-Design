@@ -28,7 +28,7 @@ public class PickupBehavior : MonoBehaviour
         if (player != null)
         {
             float distance = Vector3.Distance(transform.position, player.transform.position);
-            if (distance < 1.5f)
+            if (distance < 0.3f)
             {
                 return true;
             }

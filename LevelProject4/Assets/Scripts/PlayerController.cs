@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float moveSpeed = 10;
-    public float jumpHeight = 5;
-    public float gravity = 50;
+    public float moveSpeed = 1.5f;
+    public float jumpHeight = 0.3f;
+    public float gravity = 8;
     public float airControl = 10;
 
     CharacterController controller;

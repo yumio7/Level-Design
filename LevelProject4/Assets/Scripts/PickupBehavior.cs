@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class PickupBehavior : MonoBehaviour
 {
+    public static int items_gathered;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        items_gathered = 0;
     }
 
     // Update is called once per frame
@@ -18,6 +20,7 @@ public class PickupBehavior : MonoBehaviour
             if (IsPlayerNearby())
             {
                 Destroy(gameObject);
+                items_gathered++;
             }
         }
     }

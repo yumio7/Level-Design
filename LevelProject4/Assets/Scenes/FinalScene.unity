@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.04115426, g: 0.035011683, b: 0.016904686, a: 1}
+  m_IndirectSpecularColor: {r: 2621.2603, g: 1693.7737, b: 935.90924, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -318,7 +318,7 @@ Light:
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.5, y: 0.5}
   m_BounceIntensity: 1
-  m_ColorTemperature: 6570
+  m_ColorTemperature: 6500
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
@@ -333,13 +333,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 21305109}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.08853768, y: -0.4736678, z: -0.016003719, w: -0.8760958}
+  m_LocalRotation: {x: -0.08864918, y: 0.020162279, z: -0.09904962, w: -0.99092084}
   m_LocalPosition: {x: -263.8, y: 31.8, z: 293.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: -9.805, y: 57.075, z: 356.752}
+  m_LocalEulerAnglesHint: {x: 10.351, y: -1.305, z: 371.298}
 --- !u!1 &104977627
 GameObject:
   m_ObjectHideFlags: 0
@@ -1474,6 +1474,17 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!114 &694240065 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9018062675247262073, guid: 7bf7bef54d36982a3a50567c4f27d1a4, type: 3}
+  m_PrefabInstance: {fileID: 980578680}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &749980915
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8123,6 +8134,56 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1739409001972873261, guid: 1b1c99edbfbb48945b4e9430f8126a5a, type: 3}
   m_PrefabInstance: {fileID: 1776394425}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1792451708
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1792451710}
+  - component: {fileID: 1792451709}
+  m_Layer: 0
+  m_Name: Atmosphere Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1792451709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1792451708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96069162930fa7fb9ae84bcaaf365dec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fog: {fileID: 694240065}
+  dirLight: {fileID: 21305111}
+  fogStart: 1
+  fogEnd: 0.015
+  deltaTime: 0.1
+  lightSpeed: 0.09
+--- !u!4 &1792451710
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1792451708}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -285.886, y: 18.102976, z: 348.66528}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1805278944 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 29c011efcc1790242b38e516d4b22746, type: 3}
@@ -8305,7 +8366,7 @@ MonoBehaviour:
   m_PointlightHDType: 0
   m_SpotLightShape: 0
   m_AreaLightShape: 0
-  m_Intensity: 5.1855564
+  m_Intensity: 11.865478
   m_EnableSpotReflector: 1
   m_LuxAtDistance: 1
   m_InnerSpotPercent: 0
@@ -8419,7 +8480,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.8018868, b: 0.7028302, a: 1}
-  m_Intensity: 0.41265345
+  m_Intensity: 0.94422466
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -9975,3 +10036,4 @@ SceneRoots:
   - {fileID: 980578680}
   - {fileID: 1890199806}
   - {fileID: 1223244628}
+  - {fileID: 1792451710}

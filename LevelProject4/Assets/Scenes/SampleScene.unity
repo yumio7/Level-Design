@@ -153,7 +153,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 676965959}
-  - {fileID: 1049144923}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &321340970
@@ -1145,11 +1144,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!4 &1049144923 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 571581458734327476, guid: 2279d61b76198db47a422d22d7ae1e75, type: 3}
-  m_PrefabInstance: {fileID: 5893925974399410701}
-  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1140428718
 Mesh:
   m_ObjectHideFlags: 0
@@ -2117,23 +2111,27 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 193181854}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 88986479868509539, guid: 2279d61b76198db47a422d22d7ae1e75, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 321340970}
     - target: {fileID: 571581458734327476, guid: 2279d61b76198db47a422d22d7ae1e75, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.11000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 571581458734327476, guid: 2279d61b76198db47a422d22d7ae1e75, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.6299405
+      value: 3.783
       objectReference: {fileID: 0}
     - target: {fileID: 571581458734327476, guid: 2279d61b76198db47a422d22d7ae1e75, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 16.057598
+      value: 0.86059856
       objectReference: {fileID: 0}
     - target: {fileID: 571581458734327476, guid: 2279d61b76198db47a422d22d7ae1e75, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -21.535769
+      value: 6.99
       objectReference: {fileID: 0}
     - target: {fileID: 571581458734327476, guid: 2279d61b76198db47a422d22d7ae1e75, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2246,6 +2244,7 @@ SceneRoots:
   - {fileID: 264328913807419732}
   - {fileID: 3294751828000529140}
   - {fileID: 549555644526838389}
+  - {fileID: 5893925974399410701}
   - {fileID: 193181854}
   - {fileID: 934045816}
   - {fileID: 3825972726962715973}

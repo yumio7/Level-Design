@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -19,8 +20,8 @@ public class Resources : MonoBehaviour
     private bool BatteryDraining;
     private bool lightout;
 
-    private float t;
-    private float t2;
+    [SerializeField] private TextMeshProUGUI airText;
+    [SerializeField] private TextMeshProUGUI batteryText;
 
     // Start is called before the first frame update
     void Start()
@@ -30,22 +31,16 @@ public class Resources : MonoBehaviour
         AirDraining = true;
         BatteryDraining = true;
         lightout = false;
-        t = 0;
-        t2 = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
         if (AirDraining) {
-            //Air = (int)Mathf.Lerp(Air, 0, t);
-            //t += AirDrain * 
             Air -= AirDrain * Time.deltaTime;
         }
         
         if (BatteryDraining) {
-            //Battery = (int)Mathf.Lerp(Battery, 0, t2);
-            //t2 += BatteryDrain * Time.deltaTime;
             Battery -= BatteryDrain * Time.deltaTime;
         }
 
@@ -55,7 +50,10 @@ public class Resources : MonoBehaviour
         //if (Air <= 0)
             //GameOver();
 
-            lightout = (Battery <= 0);
+        airText.text = "Air " + ((int)Air).ToString("N");
+        batteryText.text = ((int)Battery).ToString("N") + " Bat";
+
+        lightout = (Battery <= 0);
         flashlight.SetActive(!lightout);
     }
 

@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        GetComponent<Renderer>().material.color = Color.Lerp(Color.white, Color.grey, Mathf.PingPong(Time.time, 1));
     }
 
     private void FixedUpdate()

@@ -5,6 +5,7 @@ using UnityEngine;
 public class BounceBehavior : MonoBehaviour
 {
     public float bounceForce = 5f;
+    public bool isRandom = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +26,14 @@ public class BounceBehavior : MonoBehaviour
         if (rb != null)
         {
             Vector3 bounceDirection = -collision.GetContact(0).normal;
-            rb.AddForce(bounceDirection * (bounceForce + random), ForceMode.Impulse);
+            if (isRandom)
+            {
+                rb.AddForce(bounceDirection * (bounceForce + random), ForceMode.Impulse);
+            }
+            else
+            {
+                rb.AddForce(bounceDirection * (bounceForce), ForceMode.Impulse);
+            }
         }
     }
 }

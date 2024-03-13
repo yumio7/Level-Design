@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-
+        rb.isKinematic = true;
         //rb.AddForce(transform.forward * 5);
     }
 
@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
         
         if (!LevelManager.isGameOver && LevelManager.gameStart)
         {
+            rb.isKinematic = false;
             float moveHorizontal = Input.GetAxis("Horizontal");
 
             Vector3 forceVector = new Vector3(moveHorizontal, 0.0f, 0);
@@ -41,8 +42,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            rb.velocity = Vector3.zero;
-            rb.angularVelocity = Vector3.zero;
+            rb.isKinematic = true;
         }
 
     }

@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 3208215286639555832}
   - component: {fileID: 4212051784444924447}
   - component: {fileID: 7525771536952209562}
+  - component: {fileID: 7994804231442849651}
   m_Layer: 0
   m_Name: Marble
-  m_TagString: Untagged
+  m_TagString: Marbles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -147,3 +148,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceForce: 2
+--- !u!114 &7994804231442849651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8795060570671124374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8b3b2f00df5cc247b420f52b53b1022, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

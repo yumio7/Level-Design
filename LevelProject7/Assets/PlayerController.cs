@@ -23,30 +23,27 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVertical = Input.GetAxis("Vertical");
-
-        Vector3 forceVector = new Vector3(moveHorizontal, 0.0f, 0);
-
-        if (Input.GetKey(KeyCode.LeftShift))
+        
+        if (!LevelManager.isGameOver && LevelManager.gameStart)
         {
-            rb.AddForce(forceVector * speed * 2);
-        }
-        else
-        {
-            rb.AddForce(forceVector * speed);
-        }
-        /*
-        if (!LevelManager.isGameOver)
-        {
+            float moveHorizontal = Input.GetAxis("Horizontal");
 
+            Vector3 forceVector = new Vector3(moveHorizontal, 0.0f, 0);
+
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                rb.AddForce(forceVector * speed * 2);
+            }
+            else
+            {
+                rb.AddForce(forceVector * speed);
+            }
         }
         else
         {
             rb.velocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
         }
-        */
 
     }
 

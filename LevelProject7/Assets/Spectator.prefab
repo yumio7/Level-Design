@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8737419894242109399}
   - component: {fileID: 5844099608171238699}
   - component: {fileID: 3195218543865032148}
+  - component: {fileID: 1619777268142265489}
   m_Layer: 0
   m_Name: Spectator
   m_TagString: Marbles
@@ -83,3 +84,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1619777268142265489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8795060570671124374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cba77adda1fc2c439650649cfe5f296, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mat1: {fileID: 2100000, guid: 6720a09b223e7ae4db81c8175efc0a4f, type: 2}
+  mat2: {fileID: 2100000, guid: b22700b51f023e643bcc2d47c5737de6, type: 2}

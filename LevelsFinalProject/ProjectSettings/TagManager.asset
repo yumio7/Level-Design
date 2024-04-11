@@ -7,6 +7,7 @@ TagManager:
   - Elevator
   - Door
   - Door2
+  - SecondFloor
   layers:
   - Default
   - TransparentFX

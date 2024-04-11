@@ -22,7 +22,6 @@ public class SceneManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(player.transform.position);
         if (gameStart)
         {
             timerText.gameObject.SetActive(true);
@@ -36,12 +35,13 @@ public class SceneManager : MonoBehaviour
             }
             SetTimerText();
         }
+    }
+
+    private void FixedUpdate()
+    {
         if (transportPlayer)
         {
-            Debug.Log("tp");
-            player.transform.position = new Vector3(100, 100, 100);
-            Debug.Log(player.transform.position);
-            transportPlayer = false;
+            teleportPlayer();
         }
     }
 
@@ -53,5 +53,13 @@ public class SceneManager : MonoBehaviour
     public static void doorIsClosed()
     {
         transportPlayer = true;
+    }
+
+    void teleportPlayer()
+    {
+        Debug.Log("tp");
+        player.transform.position = new Vector3(-2.86599994f, 17.5160007f, 7.1500001f);
+        Debug.Log(player.transform.position);
+        transportPlayer = false;
     }
 }

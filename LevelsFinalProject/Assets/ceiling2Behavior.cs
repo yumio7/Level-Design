@@ -30,7 +30,7 @@ public class ceiling2Behavior : MonoBehaviour
         {
             transform.position = Vector3.Lerp(transform.position, openPosition, slideSpeed * Time.deltaTime);
         }
-        if (Vector3.Distance(transform.position, openPosition) < 0.01)
+        if (Vector3.Distance(transform.position, openPosition) < 0.1)
         {
             isClosing = true;
         }

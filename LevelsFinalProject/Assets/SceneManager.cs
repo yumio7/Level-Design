@@ -58,7 +58,7 @@ public class SceneManager : MonoBehaviour
     void teleportPlayer()
     {
         Debug.Log("tp");
-        player.transform.position = new Vector3(-2.86599994f, 17.5160007f, 7.1500001f);
+        player.transform.position = new Vector3(-2.78500009f, 17.0189991f, 7.9f);
         Debug.Log(player.transform.position);
         transportPlayer = false;
     }

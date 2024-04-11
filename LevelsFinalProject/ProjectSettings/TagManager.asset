@@ -8,6 +8,8 @@ TagManager:
   - Door
   - Door2
   - SecondFloor
+  - EnterRoom
+  - Car
   layers:
   - Default
   - TransparentFX

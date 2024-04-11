@@ -17,7 +17,7 @@ public class ceiling2Behavior : MonoBehaviour
         roomEntered = GameObject.FindGameObjectWithTag("EnterRoom");
         closedPosition = transform.position;
         openPosition = closedPosition;
-        openPosition.x = closedPosition.x + 3;
+        openPosition.x = closedPosition.x + 4;
     }
 
     void Update()

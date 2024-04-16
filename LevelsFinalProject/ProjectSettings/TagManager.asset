@@ -10,6 +10,7 @@ TagManager:
   - SecondFloor
   - EnterRoom
   - Car
+  - Ambiance
   layers:
   - Default
   - TransparentFX

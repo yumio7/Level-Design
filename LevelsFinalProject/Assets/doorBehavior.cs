@@ -38,6 +38,7 @@ public class doorBehavior : MonoBehaviour
             if(callOnce == 0)
             {
                 SceneManager.doorIsClosed();
+                ding();
                 callOnce++;
             }
         }
@@ -46,5 +47,10 @@ public class doorBehavior : MonoBehaviour
     public void OpenDoor()
     {
         isOpening = true;
+    }
+
+    private void ding()
+    {
+        GetComponent<AudioSource>().Play();
     }
 }

@@ -39,7 +39,6 @@ public class SceneManager : MonoBehaviour
 
     void FixedUpdate()
     {
-        Debug.Log(transportPlayer);
         if (transportPlayer)
         {
             teleportPlayer();
@@ -48,7 +47,7 @@ public class SceneManager : MonoBehaviour
 
     void SetTimerText()
     {
-        timerText.text = countDown.ToString("0.00"); // 0.00 or f2
+        //timerText.text = countDown.ToString("0.00"); // 0.00 or f2
     }
 
     public static void doorIsClosed()

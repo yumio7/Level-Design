@@ -19,12 +19,13 @@ public class doorBehavior : MonoBehaviour
         inviDoor = transform.GetChild(0).gameObject;
         closedPosition = transform.position;
         openPosition = closedPosition;
-        openPosition.x = closedPosition.x - 2;
+        openPosition.x = closedPosition.x + 2;
+        Debug.Log(closedPosition);
     }
 
     void Update()
     {
-        if(Vector3.Distance(player.transform.position, elevator.transform.position) < 0.5)
+        if(Vector3.Distance(player.transform.position, elevator.transform.position) < 0.5f)
         {
             OpenDoor();
         }
@@ -33,7 +34,7 @@ public class doorBehavior : MonoBehaviour
             inviDoor.SetActive(true);
             transform.position = Vector3.Lerp(transform.position, openPosition, slideSpeed * Time.deltaTime);
         }
-        if(Vector3.Distance(transform.position, openPosition) < 0.2)
+        if(Vector3.Distance(transform.position, openPosition) < 0.1f)
         {
             if(callOnce == 0)
             {

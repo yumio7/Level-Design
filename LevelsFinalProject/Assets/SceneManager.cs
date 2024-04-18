@@ -37,8 +37,9 @@ public class SceneManager : MonoBehaviour
         }
     }
 
-    private void FixedUpdate()
+    void FixedUpdate()
     {
+        Debug.Log(transportPlayer);
         if (transportPlayer)
         {
             teleportPlayer();
@@ -59,7 +60,7 @@ public class SceneManager : MonoBehaviour
     void teleportPlayer()
     {
         Debug.Log("tp");
-        player.transform.position = new Vector3(-2.78500009f, 17.0189991f, 7.9f);
+        player.transform.position = new Vector3(-12.4060001f, 1.21700001f, 3.72099996f);
         Debug.Log(player.transform.position);
         transportPlayer = false;
     }

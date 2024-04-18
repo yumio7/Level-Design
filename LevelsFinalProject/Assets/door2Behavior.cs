@@ -19,7 +19,7 @@ public class door2Behavior : MonoBehaviour
         inviDoor = transform.GetChild(0).gameObject;
         closedPosition = transform.position;
         openPosition = closedPosition;
-        openPosition.x = closedPosition.x + 2;
+        openPosition.x = closedPosition.x - 2;
     }
 
     void Update()
@@ -35,7 +35,7 @@ public class door2Behavior : MonoBehaviour
         
         if(Vector3.Distance(player.transform.position, elevator.transform.position) > 2 && isOpening)
         {
-            isClosing = true;
+            //isClosing = true;
         }
         if (isClosing)
         {

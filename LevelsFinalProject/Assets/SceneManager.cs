@@ -16,7 +16,7 @@ public class SceneManager : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         countDown = levelDuration;
         SetTimerText();
-        timerText.gameObject.SetActive(false);
+        //timerText.gameObject.SetActive(false);
     }
 
     // Update is called once per frame

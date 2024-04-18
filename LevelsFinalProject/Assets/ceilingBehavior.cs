@@ -12,12 +12,15 @@ public class ceilingBehavior : MonoBehaviour
     GameObject player;
     GameObject roomEntered;
     GameObject car;
+    GameObject godRay;
     Rigidbody carRB;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         roomEntered = GameObject.FindGameObjectWithTag("EnterRoom");
         car = GameObject.FindGameObjectWithTag("Car");
+        godRay = GameObject.FindGameObjectWithTag("Godray");
+        godRay.SetActive(false);
         carRB = car.GetComponent<Rigidbody>();
         carRB.isKinematic = true;
         closedPosition = transform.position;
@@ -34,6 +37,7 @@ public class ceilingBehavior : MonoBehaviour
         if (isOpening && !isClosing)
         {
             transform.position = Vector3.Lerp(transform.position, openPosition, slideSpeed * Time.deltaTime);
+            godRay.SetActive(true);
         }
         if(Vector3.Distance(transform.position, openPosition) < 0.7)
         {
@@ -46,6 +50,10 @@ public class ceilingBehavior : MonoBehaviour
         if (isClosing)
         {
             transform.position = Vector3.Lerp(transform.position, closedPosition, slideSpeed * Time.deltaTime);
+        }
+        if(isClosing && Vector3.Distance(transform.position, closedPosition) < 0.1)
+        {
+            godRay.SetActive(false);
         }
     }
 

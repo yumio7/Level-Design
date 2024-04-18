@@ -12,6 +12,12 @@ TagManager:
   - Car
   - Ambiance
   - Godray
+  - Windshield
+  - Wheel
+  - Top
+  - Postwindshield
+  - Postwheel
+  - Posttop
   layers:
   - Default
   - TransparentFX

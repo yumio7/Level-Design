@@ -18,6 +18,7 @@ TagManager:
   - Postwindshield
   - Postwheel
   - Posttop
+  - WholeCar
   layers:
   - Default
   - TransparentFX

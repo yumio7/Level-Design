@@ -54,7 +54,7 @@ public class SceneManager : MonoBehaviour
     public static void doorIsClosed()
     {
         transportPlayer = true;
-        GameObject.FindGameObjectWithTag("Ambiance").GetComponent<AudioSource>().Stop();
+        //GameObject.FindGameObjectWithTag("Ambiance").GetComponent<AudioSource>().Stop();
     }
 
     void teleportPlayer()

@@ -16,7 +16,7 @@ public class doorBehavior : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         elevator = GameObject.FindGameObjectWithTag("Elevator");
-        inviDoor = transform.GetChild(0).gameObject;
+        //inviDoor = transform.GetChild(0).gameObject;
         closedPosition = transform.position;
         openPosition = closedPosition;
         openPosition.x = closedPosition.x + 2;
@@ -31,7 +31,7 @@ public class doorBehavior : MonoBehaviour
         }
         if (isOpening)
         {
-            inviDoor.SetActive(true);
+            //inviDoor.SetActive(true);
             transform.position = Vector3.Lerp(transform.position, openPosition, slideSpeed * Time.deltaTime);
         }
         if(Vector3.Distance(transform.position, openPosition) < 0.1f)
@@ -52,6 +52,6 @@ public class doorBehavior : MonoBehaviour
 
     private void ding()
     {
-        GetComponent<AudioSource>().Play();
+        //GetComponent<AudioSource>().Play();
     }
 }

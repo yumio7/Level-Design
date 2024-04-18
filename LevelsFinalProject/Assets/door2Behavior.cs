@@ -16,7 +16,7 @@ public class door2Behavior : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         elevator = GameObject.FindGameObjectWithTag("SecondFloor");
-        inviDoor = transform.GetChild(0).gameObject;
+        //inviDoor = transform.GetChild(0).gameObject;
         closedPosition = transform.position;
         openPosition = closedPosition;
         openPosition.x = closedPosition.x - 2;
@@ -39,7 +39,7 @@ public class door2Behavior : MonoBehaviour
         }
         if (isClosing)
         {
-            inviDoor.SetActive(true);
+            //inviDoor.SetActive(true);
             transform.position = Vector3.Lerp(transform.position, closedPosition, slideSpeed * Time.deltaTime);
         }
     }

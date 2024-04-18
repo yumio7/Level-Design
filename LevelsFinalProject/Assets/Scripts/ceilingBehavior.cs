@@ -18,7 +18,7 @@ public class ceilingBehavior : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         roomEntered = GameObject.FindGameObjectWithTag("EnterRoom");
-        car = GameObject.FindGameObjectWithTag("Car");
+        car = GameObject.FindGameObjectWithTag("WholeCar");
         godRay = GameObject.FindGameObjectWithTag("Godray");
         godRay.SetActive(false);
         carRB = car.GetComponent<Rigidbody>();

@@ -13,6 +13,7 @@ public class DismantleBehavior : MonoBehaviour
     GameObject car;
     float distance;
     int count = 0;
+    bool rayResult = false;
 
     // Start is called before the first frame update
     void Start()
@@ -39,7 +40,7 @@ public class DismantleBehavior : MonoBehaviour
     {
         distance = Vector3.Distance(transform.position, car.transform.position);
 
-        if (Input.GetMouseButtonDown(0) && distance <= 2 && IsCarInView() && count < 3)
+        if (Input.GetMouseButtonDown(0) && distance <= 2 && rayResult && count < 3)
         {
             if (count == 0)
             {
@@ -71,6 +72,11 @@ public class DismantleBehavior : MonoBehaviour
         }
     }
 
+    private void FixedUpdate()
+    {
+        rayResult = IsCarInView();
+    }
+
     bool IsCarInView()
     {
         RaycastHit hit;
@@ -79,6 +85,7 @@ public class DismantleBehavior : MonoBehaviour
         {
             if (hit.collider.CompareTag("Car"))
             {
+                Debug.Log("Please work ples");
                 return true;
             }
         }

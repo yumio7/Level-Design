@@ -11,6 +11,7 @@ TagManager:
   - EnterRoom
   - Car
   - Ambiance
+  - Godray
   layers:
   - Default
   - TransparentFX

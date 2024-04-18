@@ -20,7 +20,7 @@ public class DismantleBehavior : MonoBehaviour
         carWindshield = GameObject.FindGameObjectWithTag("Windshield");
         postWindshield = GameObject.FindGameObjectWithTag("Postwindshield");
         wheels = GameObject.FindGameObjectsWithTag("Wheel");
-        postWheels = GameObject.FindGameObjectsWithTag("Postwheels");
+        postWheels = GameObject.FindGameObjectsWithTag("Postwheel");
         carTop = GameObject.FindGameObjectsWithTag("Top");
         postTop = GameObject.FindGameObjectWithTag("Posttop");
         car = GameObject.FindGameObjectWithTag("Car");

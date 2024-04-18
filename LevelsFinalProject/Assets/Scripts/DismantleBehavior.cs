@@ -24,7 +24,7 @@ public class DismantleBehavior : MonoBehaviour
         postWheels = GameObject.FindGameObjectsWithTag("Postwheel");
         carTop = GameObject.FindGameObjectsWithTag("Top");
         postTop = GameObject.FindGameObjectWithTag("Posttop");
-        car = GameObject.FindGameObjectWithTag("Car");
+        car = GameObject.FindGameObjectWithTag("WholeCar");
 
         postWindshield.SetActive(false);
         postTop.SetActive(false);
@@ -40,8 +40,12 @@ public class DismantleBehavior : MonoBehaviour
     {
         distance = Vector3.Distance(transform.position, car.transform.position);
 
-        if (Input.GetMouseButtonDown(0) && distance <= 2 && rayResult && count < 3)
+        Debug.Log(distance);
+
+        if (Input.GetMouseButtonDown(0) && distance <= 5 && rayResult && count < 3)
         {
+            Debug.Log("fjdkfjdfd");
+
             if (count == 0)
             {
                 carWindshield.SetActive(false);

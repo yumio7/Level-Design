@@ -30,7 +30,7 @@ public class ceilingBehavior : MonoBehaviour
 
     void Update()
     {
-        if (Vector3.Distance(player.transform.position, roomEntered.transform.position) < 0.5)
+        if (Vector3.Distance(player.transform.position, roomEntered.transform.position) < 1)
         {
             OpenDoor();
         }

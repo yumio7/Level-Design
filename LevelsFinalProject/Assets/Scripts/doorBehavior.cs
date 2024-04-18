@@ -52,6 +52,6 @@ public class doorBehavior : MonoBehaviour
 
     private void ding()
     {
-        //GetComponent<AudioSource>().Play();
+        GetComponent<AudioSource>().Play();
     }
 }

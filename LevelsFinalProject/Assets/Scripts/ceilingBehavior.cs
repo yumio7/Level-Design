@@ -51,7 +51,7 @@ public class ceilingBehavior : MonoBehaviour
         {
             transform.position = Vector3.Lerp(transform.position, closedPosition, slideSpeed * Time.deltaTime);
         }
-        if(isClosing && Vector3.Distance(transform.position, closedPosition) < 0.1)
+        if(isClosing && Vector3.Distance(transform.position, closedPosition) < 0.3)
         {
             godRay.SetActive(false);
         }

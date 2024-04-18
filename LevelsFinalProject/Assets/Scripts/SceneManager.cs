@@ -39,7 +39,6 @@ public class SceneManager : MonoBehaviour
 
     void FixedUpdate()
     {
-        Debug.Log(transportPlayer);
         if (transportPlayer)
         {
             teleportPlayer();
